@@ -1,0 +1,19 @@
+{
+  "version": "2.0",
+  "app_name": "restapi_profile",
+  "manage_iam_role": true,
+  "xray": true,
+  "environment_variables": {
+    "REGION_NAME": "us-east-1"
+  },
+  "stages": {
+    "dev/Profile": {
+      "api_gateway_stage": "dev",
+      "layers": [],
+      "environment_variables": {
+        "AUTHORIZER_ARN": "arn:aws:cognito-idp:us-east-1:<account_id>:userpool/<authorizer_id>",
+        "ENV": "dev"
+      }
+    }
+  }
+}
