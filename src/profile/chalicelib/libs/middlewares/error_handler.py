@@ -1,5 +1,5 @@
-from pw_lambda_lib.logger import Logger
-from pw_lambda_lib.utils import errors, response_handler
+from ..utils import errors, response_handler
+from ...logger import Logger
 
 
 def handle_errors(event, get_response):
